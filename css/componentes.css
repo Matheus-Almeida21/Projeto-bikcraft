@@ -54,6 +54,26 @@
   margin-right: auto;
 }
 
+/*-----------------TITULO-----------------*/
+.titulo-bg{
+  background: var(--cor-11);
+  padding-top: 60px;
+  padding-bottom: 60px
+}
+.titulo p{
+  margin-bottom: 5px;
+}
+@media (max-width: 800px){
+  .titulo-bg{
+    padding-top: 40px;
+    padding-bottom: 40px
+  }
+  .titulo p{
+    font-size: 1rem;
+    text-transform: lowercase;
+    font-weight: 400;
+  }
+}
 /*-----------------TEXTOS*-----------------*/
 .font-1-xs {
   font: 500 0.75rem/1.35 "Poppins", sans-serif;
