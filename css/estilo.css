@@ -2,10 +2,11 @@
 @import "header.css";
 @import "introducao.css";
 @import "componentes.css";
-@import "bicicletas.css";
+@import "bicicletas-lista.css";
 @import "tecnologia.css";
 @import "parceiros.css";
 @import "depoimento.css";
 @import "seguros.css";
 @import "footer.css";
 @import "termos.css";
+@import "bicicletas.css";

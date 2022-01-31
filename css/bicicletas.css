@@ -1,53 +1,89 @@
-.bicicletas-lista{
-  padding-top: 60px ;
-  padding-bottom: 120px;
+/*---------------CSS PAGINA BICICLETAS---------------*/
+.bicicletas-bg{
+  background: linear-gradient(to right, var(--cor-0) 30%, var(--cor-11) 0%);
 }
-.bicicletas-lista ul{
-  display: flex;
+.bicicletas{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 40px;
-  padding: 0 20px 20px 20px;
-  max-width: 1400px;
-  margin-left: auto;
-  margin-right: auto;
-  overflow-x: auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
-.bicicletas-lista li{
-  min-width: 280px;
+.bicicletas-imagem{
+  display: grid;
 }
-.bicicletas-lista h2{
-  margin-bottom:40px ;
+.bicicletas-imagem img{
+  grid-area: 1/1;
 }
-.bicicletas-lista a{
+.bicicletas-imagem span{
+  background: var(--cor-12);
+  padding: 8px 16px 8px 8px;
+  display: inline-block;
+  grid-area: 1/1;
+  place-self: start end;
+  margin-top: 20px;
+  border-radius: 4px 0 0 4px;
+}
+.bicicletas-conteudo{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-content: flex-start;
+}
+.bicicletas h2,
+.bicicletas p{
+  grid-column: 1 / -1;
+}
+.bicicletas h2{
+  margin-bottom: 20px;
+}
+.bicicletas h2::before{
+  content: "";
   display: block;
-}
-.bicicletas-lista img{
-  margin-bottom: 16px;
-}
-.bicicletas-lista h3{
+  width: 12px;
+  height: 8px;
+  background: var(--cor-p1);
   margin-bottom: 8px;
+}
+.bicicletas p{
+  margin-bottom: 32px;
+}
+.bicicletas a{
+  place-self: end;
+}
+.bicicletas li{
   display: flex;
   align-items: center;
 }
-.bicicletas-lista h3::before{
-  content: "";
-  background-color: var(--cor-p1);
-  height: 8px;
-  width: 12px;
-  margin-right: 8px;
-  display: inline-block;
-  transition: width 0.2s;
+.bicicletas li + li{
+  margin-top: 16px;
 }
-.bicicletas-lista a:hover h3::before{
+.bicicletas-conteudo img{
   width: 24px;
+  margin-right: 8px;
 }
-.bicicletas-lista li span{
-  padding-left: 20px;
-}
-@media (max-width: 800px){
-  .bicicletas-lista{
-    padding-bottom: 60px;
-  }
-  .bicicletas-lista ul{
+/*--------------------PARTE RESPONSIVA------------------*/
+@media (max-width:800px){
+  .bicicletas{
+    grid-template-columns: 1fr;
     gap: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .bicicletas-bg{
+    background: var(--cor-11);
+  }
+}
+@media (max-width: 600px){
+  .bicicletas-conteudo{
+    grid-template-columns: 1fr;
+  }
+  .bicicletas ul{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 32px;
+    font-size: 1rem;
+  }
+  .bicicletas a{
+    place-self: start;
   }
 }
